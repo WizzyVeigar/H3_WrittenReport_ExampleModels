@@ -11,7 +11,8 @@ namespace H3_WrittenReport_Example
         Fire,
         Cryo,
         Corrosive,
-        Shock
+        Shock,
+        None
     }
     interface IAddElemental
     {
