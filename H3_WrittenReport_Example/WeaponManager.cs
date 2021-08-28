@@ -13,21 +13,23 @@ namespace H3_WrittenReport_Example
         {
             using (WeaponContext context = new WeaponContext())
             {
-                foreach (BaseWeapon weapon in weapons)
-                {
-                    if (weapon is Pistol)
-                    {
-                        context.Pistols.Add((Pistol)weapon);
-                    }
-                    else if(weapon is SniperRifle)
-                    {
-                        context.SniperRifles.Add((SniperRifle)weapon);
-                    }
-                    else
-                    {
-                        context.AssaultRifles.Add((AssaultRifle)weapon);
-                    }
-                }
+                //foreach (BaseWeapon weapon in weapons)
+                //{
+                //    if (weapon is Pistol)
+                //    {
+                //        context.Pistols.Add((Pistol)weapon);
+                //    }
+                //    else if(weapon is SniperRifle)
+                //    {
+                //        context.SniperRifles.Add((SniperRifle)weapon);
+                //    }
+                //    else
+                //    {
+                //        context.AssaultRifles.Add((AssaultRifle)weapon);
+                //    }
+                //}
+
+                context.BaseWeapons.AddRange(weapons);
                 context.SaveChanges();
             }
         }

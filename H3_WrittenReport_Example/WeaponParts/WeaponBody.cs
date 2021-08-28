@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace H3_WrittenReport_Example.WeaponParts
 {
-    public class WeaponBody
+    public class WeaponBody : WeaponPart
     {
-        public Manufacturer Manufacturer { get; protected set; }
-
-        public WeaponBody(Manufacturer man)
+        public int BonusAmmo { get; set; }
+        public WeaponBody(Manufacturer man) : base(man)
         {
-            Manufacturer = man;
         }
     }
 }
